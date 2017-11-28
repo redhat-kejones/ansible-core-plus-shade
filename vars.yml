@@ -7,7 +7,7 @@ rhn_user: "{{ vault_rhn_user }}"
 rhn_pwd: "{{ vault_rhn_pwd }}"
 rhn_pool_name: "{{ vault_rhn_pool_name }}"
 
-hostname_full: ansible-engine.int.hattrick1.local
-hostname_short: ansible-engine
-external_ip: 192.168.1.80
+hostname_full: ansible-shade.rhshadowbox.com
+hostname_short: ansible-shade
+external_ip: 192.168.1.95
 

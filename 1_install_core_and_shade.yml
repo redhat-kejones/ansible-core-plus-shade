@@ -76,12 +76,12 @@
       become: false
       ignore_errors: true
 
-    - name: install the nginx rpm from a remote repo
+    - name: install the epel rpm from a remote repo
       yum:
         name: https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
         state: present
 
-    - name: install IPA packages
+    - name: install ansible and other packages
       yum: 
         name: '{{ item }}'
         state: latest
@@ -112,3 +112,7 @@
         name: shade
         state: latest
 
+    - name: copy over ansible.cfg
+      copy:
+        src: files/.ansible.cfg
+        dest: /home/cloud-user/.ansible.cfg
