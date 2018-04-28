@@ -110,7 +110,8 @@
     - name: install shade
       pip:
         name: shade
-        state: latest
+        version: 1.27.1
+        extra_args: "-Iv"
 
     - name: copy over ansible.cfg
       copy:
